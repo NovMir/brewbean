@@ -1,35 +1,38 @@
+
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET index page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home'});
+  res.render('index', { title: 'Group 4' });
 });
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home'});
+  res.render('home', { title: 'Home' });
 });
 
-/* GET About Us page. */
+/* GET about page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About'});
+  res.render('about', { title: 'About' });
 });
 
 
-/* GET Products page. */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects'});
+
+/* GET Cart page. */
+router.get('/cart', function(req, res, next) {
+  res.render('cart', { title: 'Cart' });
 });
 
-/* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services'});
+/* GET home page. */
+router.get('/list', function(req, res, next) {
+  res.render('list', { title: 'List' });
 });
 
-/* GET Contact Us page. */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact'});
+
+/* GET UpdateProductdescription page. */  //areebah1
+router.get('/updatedescription2', function(req, res, next) {
+  res.render('updatedescription2', { title: 'updatedescription' });
 });
 
 module.exports = router;

@@ -1,0 +1,59 @@
+  
+
+
+
+<%-include('partials/header.ejs')%>
+<br><br><br>
+
+
+<div class="container d-flex justify-content-center mt-5">
+
+    <h1>Product List</h1>
+  </div>
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <div class="col">
+
+            <a href="/Product/add" class="btn btn-success my-2" role="button" id="addproductebtn">
+            <i class="fas fa-plus-circle"></i> Create Product</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <thead class="table-dark">
+                <tr class=" my-4">
+                    <th class="text-center col">Product Id</th>
+                    <th class="text-center col">Product Name</th>
+                    <th class="text-center col">Product Price</th>
+                    <th class="text-center col"> Stock</th>
+                    <th class="text-center col">Action</th>
+                    <th class="text-center col">Add to Basket</th>
+
+                </tr>
+            </thead>
+            
+                <%for (let i=1; i<=10; i++) {%>
+                <tr>
+                    <th scope="row" class="text-center col"><%=i%></th>
+                    <td  class="text-center col"></td>
+                    <td  class="text-center col"></td>
+                    <td  class="text-center col"></td>
+                    <td  class="text-center col">
+                        <a href="#" class="btn btn-success btn-sm">
+                        <i class="fas fa-pencil-alt "></i> Edit</a>
+                    </td>
+
+                    <td  class="text-center col">
+                        <a href="#" class="btn btn-success btn-sm">
+                        <i class="fa-sharp fa-solid fa-cart-plus" style="color: white"></i> Cart</a>
+                    </td>
+
+                </tr>
+
+                <%}%>
+
+            </table>
+        </div>
+    </div>
+  </main>
+  <%-include('partials/footer.ejs')%>
