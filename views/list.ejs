@@ -15,9 +15,14 @@
     <div class="row">
         <div class="col">
 
+            <!-- create product button -->
+
             <a href="/Product/add" class="btn btn-success my-2" role="button" id="addproductebtn">
             <i class="fas fa-plus-circle"></i> Create Product</a>
             <br>
+
+
+                <!-- Main table starts here -->
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row -->
                 <thead class="table-dark">
@@ -31,6 +36,7 @@
 
                 </tr>
             </thead>
+
             
                 <%for (let i=1; i<=10; i++) {%>
                 <tr>
