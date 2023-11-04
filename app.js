@@ -9,6 +9,23 @@ let usersRouter = require('./routes/users');
 
 let app = express();
 
+// database setup
+
+let oracledb = require('oracledb');
+let connection;
+let dbconfig = require('./dbconfig');
+
+async function connectToOracleDB() {
+  try {
+    connection = await oracledb.getConnection(dbconfig);
+    console.log('Connected to Oracle SQL database...');
+  } catch (err) {
+    console.error('Error connecting to Oracle SQL database:', err);
+  }
+}
+
+connectToOracleDB();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

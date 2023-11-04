@@ -1,0 +1,3 @@
+-- queries goes here
+-- it works as a sql file
+--select * from bb_product;
