@@ -35,4 +35,14 @@ router.get('/updatedescription2', function(req, res, next) {
   res.render('updatedescription2', { title: 'updatedescription' });
 });
 
+/* GET UpdateOrderStatus page. */  //maan
+router.get('/updateorderstatus', function(req, res, next) {
+  res.render('updateorderstatus', { title: 'updateorderstatus' });
+});
+
+/* GET showproductstatetax page. */  //maan
+router.get('/showproductstatetax', function(req, res, next) {
+  res.render('showproductstatetax', { title: 'showproductstatetax' });
+});
+
 module.exports = router;
