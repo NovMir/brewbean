@@ -1,8 +1,9 @@
 
 var express = require('express');
 var router = express.Router();
-
+/*const Product = require('./models/Product');
 /* GET index page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Group 4' });
 });
@@ -24,11 +25,11 @@ router.get('/cart', function(req, res, next) {
   res.render('cart', { title: 'Cart' });
 });
 
-/* GET home page. */
+ /* GET home page. */
 router.get('/list', function(req, res, next) {
   res.render('list', { title: 'List' });
 });
-
+ 
 
 /* GET UpdateProductdescription page. */  //areebah1
 router.get('/updatedescription2', function(req, res, next) {
@@ -44,5 +45,11 @@ router.get('/updateorderstatus', function(req, res, next) {
 router.get('/showproductstatetax', function(req, res, next) {
   res.render('showproductstatetax', { title: 'showproductstatetax' });
 });
+
+/* Get Create new product page. Noor*/
+router.get('/create-product', function(req, res, next) {
+  res.render('createProduct', { title: 'createProduct' });
+});
+
 
 module.exports = router;
